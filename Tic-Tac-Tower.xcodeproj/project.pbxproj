@@ -7,10 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0402C62C3C678300B5E692 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402BE2C3C678300B5E692 /* GameState.swift */; };
+		0C0402C72C3C678300B5E692 /* GameSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402BF2C3C678300B5E692 /* GameSound.swift */; };
+		0C0402C82C3C678300B5E692 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402C02C3C678300B5E692 /* ViewModel.swift */; };
+		0C0402C92C3C678300B5E692 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402C12C3C678300B5E692 /* GameView.swift */; };
+		0C0402CA2C3C678300B5E692 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402C22C3C678300B5E692 /* ScoreView.swift */; };
+		0C0402CB2C3C678300B5E692 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402C32C3C678300B5E692 /* ControlsView.swift */; };
+		0C0402CC2C3C678300B5E692 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402C42C3C678300B5E692 /* ContentView.swift */; };
+		0C0402D92C3C681D00B5E692 /* drop_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402CD2C3C681D00B5E692 /* drop_1.mp3 */; };
+		0C0402DA2C3C681D00B5E692 /* drop_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402CE2C3C681D00B5E692 /* drop_2.mp3 */; };
+		0C0402DB2C3C681D00B5E692 /* drop_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402CF2C3C681D00B5E692 /* drop_3.mp3 */; };
+		0C0402DC2C3C681D00B5E692 /* drop_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D02C3C681D00B5E692 /* drop_4.mp3 */; };
+		0C0402DD2C3C681D00B5E692 /* drop_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D12C3C681D00B5E692 /* drop_5.mp3 */; };
+		0C0402DE2C3C681D00B5E692 /* error_end_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D22C3C681D00B5E692 /* error_end_1.mp3 */; };
+		0C0402DF2C3C681D00B5E692 /* error_start_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D32C3C681D00B5E692 /* error_start_1.mp3 */; };
+		0C0402E02C3C681D00B5E692 /* pickup_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D42C3C681D00B5E692 /* pickup_1.mp3 */; };
+		0C0402E12C3C681D00B5E692 /* pickup_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D52C3C681D00B5E692 /* pickup_2.mp3 */; };
+		0C0402E22C3C681D00B5E692 /* pickup_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D62C3C681D00B5E692 /* pickup_3.mp3 */; };
+		0C0402E32C3C681D00B5E692 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D72C3C681D00B5E692 /* win.mp3 */; };
+		0C3DF8B62C3C6F890081D323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3DF8B52C3C6F890081D323 /* Assets.xcassets */; };
 		0CCF1D102C3C645500FA3EA6 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 0CCF1D0F2C3C645500FA3EA6 /* RealityKitContent */; };
 		0CCF1D122C3C645500FA3EA6 /* Tic_Tac_TowerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF1D112C3C645500FA3EA6 /* Tic_Tac_TowerApp.swift */; };
-		0CCF1D142C3C645500FA3EA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF1D132C3C645500FA3EA6 /* ContentView.swift */; };
-		0CCF1D162C3C645600FA3EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CCF1D152C3C645600FA3EA6 /* Assets.xcassets */; };
 		0CCF1D192C3C645600FA3EA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CCF1D182C3C645600FA3EA6 /* Preview Assets.xcassets */; };
 		0CCF1D242C3C645600FA3EA6 /* Tic_Tac_TowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF1D232C3C645600FA3EA6 /* Tic_Tac_TowerTests.swift */; };
 /* End PBXBuildFile section */
@@ -26,11 +43,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0402BE2C3C678300B5E692 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		0C0402BF2C3C678300B5E692 /* GameSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSound.swift; sourceTree = "<group>"; };
+		0C0402C02C3C678300B5E692 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		0C0402C12C3C678300B5E692 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		0C0402C22C3C678300B5E692 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		0C0402C32C3C678300B5E692 /* ControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		0C0402C42C3C678300B5E692 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../Downloads/Tic-Tac-Tower-main/TicTacTowers2/ContentView.swift"; sourceTree = "<group>"; };
+		0C0402CD2C3C681D00B5E692 /* drop_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop_1.mp3; sourceTree = "<group>"; };
+		0C0402CE2C3C681D00B5E692 /* drop_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop_2.mp3; sourceTree = "<group>"; };
+		0C0402CF2C3C681D00B5E692 /* drop_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop_3.mp3; sourceTree = "<group>"; };
+		0C0402D02C3C681D00B5E692 /* drop_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop_4.mp3; sourceTree = "<group>"; };
+		0C0402D12C3C681D00B5E692 /* drop_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop_5.mp3; sourceTree = "<group>"; };
+		0C0402D22C3C681D00B5E692 /* error_end_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error_end_1.mp3; sourceTree = "<group>"; };
+		0C0402D32C3C681D00B5E692 /* error_start_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error_start_1.mp3; sourceTree = "<group>"; };
+		0C0402D42C3C681D00B5E692 /* pickup_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pickup_1.mp3; sourceTree = "<group>"; };
+		0C0402D52C3C681D00B5E692 /* pickup_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pickup_2.mp3; sourceTree = "<group>"; };
+		0C0402D62C3C681D00B5E692 /* pickup_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pickup_3.mp3; sourceTree = "<group>"; };
+		0C0402D72C3C681D00B5E692 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		0C3DF8B52C3C6F890081D323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CCF1D0A2C3C645500FA3EA6 /* Tic-Tac-Tower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-Tac-Tower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CCF1D0E2C3C645500FA3EA6 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		0CCF1D112C3C645500FA3EA6 /* Tic_Tac_TowerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_TowerApp.swift; sourceTree = "<group>"; };
-		0CCF1D132C3C645500FA3EA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0CCF1D152C3C645600FA3EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CCF1D182C3C645600FA3EA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0CCF1D1A2C3C645600FA3EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CCF1D1F2C3C645600FA3EA6 /* Tic-Tac-TowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tic-Tac-TowerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +90,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0402D82C3C681D00B5E692 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				0C0402CD2C3C681D00B5E692 /* drop_1.mp3 */,
+				0C0402CE2C3C681D00B5E692 /* drop_2.mp3 */,
+				0C0402CF2C3C681D00B5E692 /* drop_3.mp3 */,
+				0C0402D02C3C681D00B5E692 /* drop_4.mp3 */,
+				0C0402D12C3C681D00B5E692 /* drop_5.mp3 */,
+				0C0402D22C3C681D00B5E692 /* error_end_1.mp3 */,
+				0C0402D32C3C681D00B5E692 /* error_start_1.mp3 */,
+				0C0402D42C3C681D00B5E692 /* pickup_1.mp3 */,
+				0C0402D52C3C681D00B5E692 /* pickup_2.mp3 */,
+				0C0402D62C3C681D00B5E692 /* pickup_3.mp3 */,
+				0C0402D72C3C681D00B5E692 /* win.mp3 */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
 		0CCF1D012C3C645500FA3EA6 = {
 			isa = PBXGroup;
 			children = (
@@ -78,9 +130,16 @@
 		0CCF1D0C2C3C645500FA3EA6 /* Tic-Tac-Tower */ = {
 			isa = PBXGroup;
 			children = (
+				0C3DF8B52C3C6F890081D323 /* Assets.xcassets */,
+				0C0402D82C3C681D00B5E692 /* Asset */,
+				0C0402C42C3C678300B5E692 /* ContentView.swift */,
+				0C0402C32C3C678300B5E692 /* ControlsView.swift */,
+				0C0402BF2C3C678300B5E692 /* GameSound.swift */,
+				0C0402BE2C3C678300B5E692 /* GameState.swift */,
+				0C0402C12C3C678300B5E692 /* GameView.swift */,
+				0C0402C22C3C678300B5E692 /* ScoreView.swift */,
+				0C0402C02C3C678300B5E692 /* ViewModel.swift */,
 				0CCF1D112C3C645500FA3EA6 /* Tic_Tac_TowerApp.swift */,
-				0CCF1D132C3C645500FA3EA6 /* ContentView.swift */,
-				0CCF1D152C3C645600FA3EA6 /* Assets.xcassets */,
 				0CCF1D1A2C3C645600FA3EA6 /* Info.plist */,
 				0CCF1D172C3C645600FA3EA6 /* Preview Content */,
 			);
@@ -195,8 +254,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0402DD2C3C681D00B5E692 /* drop_5.mp3 in Resources */,
+				0C0402DB2C3C681D00B5E692 /* drop_3.mp3 in Resources */,
+				0C0402E12C3C681D00B5E692 /* pickup_2.mp3 in Resources */,
 				0CCF1D192C3C645600FA3EA6 /* Preview Assets.xcassets in Resources */,
-				0CCF1D162C3C645600FA3EA6 /* Assets.xcassets in Resources */,
+				0C0402E22C3C681D00B5E692 /* pickup_3.mp3 in Resources */,
+				0C0402D92C3C681D00B5E692 /* drop_1.mp3 in Resources */,
+				0C3DF8B62C3C6F890081D323 /* Assets.xcassets in Resources */,
+				0C0402DA2C3C681D00B5E692 /* drop_2.mp3 in Resources */,
+				0C0402DE2C3C681D00B5E692 /* error_end_1.mp3 in Resources */,
+				0C0402DF2C3C681D00B5E692 /* error_start_1.mp3 in Resources */,
+				0C0402DC2C3C681D00B5E692 /* drop_4.mp3 in Resources */,
+				0C0402E02C3C681D00B5E692 /* pickup_1.mp3 in Resources */,
+				0C0402E32C3C681D00B5E692 /* win.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CCF1D142C3C645500FA3EA6 /* ContentView.swift in Sources */,
+				0C0402C82C3C678300B5E692 /* ViewModel.swift in Sources */,
+				0C0402C62C3C678300B5E692 /* GameState.swift in Sources */,
+				0C0402C72C3C678300B5E692 /* GameSound.swift in Sources */,
+				0C0402CB2C3C678300B5E692 /* ControlsView.swift in Sources */,
+				0C0402CC2C3C678300B5E692 /* ContentView.swift in Sources */,
+				0C0402CA2C3C678300B5E692 /* ScoreView.swift in Sources */,
+				0C0402C92C3C678300B5E692 /* GameView.swift in Sources */,
 				0CCF1D122C3C645500FA3EA6 /* Tic_Tac_TowerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
