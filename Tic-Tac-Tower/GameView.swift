@@ -245,7 +245,10 @@ struct GameView: View {
                                 else if currStatus == .redWin { model.scoreB += 1 }
                                 if currStatus == .blueWin || currStatus == .redWin {
                                     model.gameState.saveWinningTowerComp()
-                                    model.winningTowersFire(isEmitting: true)
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + model.aiMoveDuration, execute: {
+                                        model.winningTowersFire(isEmitting: true)
+                                    })
+                                    
                                 }
                             }
                             
@@ -263,6 +266,7 @@ struct GameView: View {
                             if model.vsAI && model.enforceRules && towerComponent.position != currentHighlightPosition && ( model.gameState.gameStatus == .blueTurn ||  model.gameState.gameStatus == .redTurn) {
                                 model.recordHumanMove(lastHumanMoveTowerComp: towerComponent, endPosition:currentHighlightPosition)
                                 model.makeAImove()
+                                
                             }
                         
                             

@@ -77,7 +77,7 @@ import SwiftUI
     var aiOpponent: AIOpponent = .init()
     var vsAI: Bool = true
     
-//    var vsHuman: Bool = false
+    let aiMoveDuration: Double = 1.3
 
     
     var scoreA: Int = 0
@@ -187,7 +187,11 @@ import SwiftUI
     func makeAImove() {
         print("AI moving....")
         // get ai's next move
-        var aiNextMove: (TowerPosition, TowerSize) = self.aiOpponent.getAIsNextMove()
+        var hard = false
+        if self.scoreA + self.scoreB > 5 {
+            hard = true
+        }
+        var aiNextMove: (TowerPosition, TowerSize) = self.aiOpponent.getAIsNextMove(hard:hard)
         var homePos: TowerPosition = self.getAIsAvailableTowerHomePositionBySize(size: aiNextMove.1)
         print("ai's next move \(aiNextMove), homePos: \(homePos)")
         
@@ -208,7 +212,10 @@ import SwiftUI
             else if currStatus == .redWin { self.scoreB += 1 }
             if currStatus == .blueWin || currStatus == .redWin {
                 self.gameState.saveWinningTowerComp()
-                self.winningTowersFire(isEmitting: true)
+//                self.winningTowersFire(isEmitting: true)
+                DispatchQueue.main.asyncAfter(deadline: .now() + self.aiMoveDuration, execute: {
+                    self.winningTowersFire(isEmitting: true)
+                })
             }
         }
         // 3. record in aiOppnent
@@ -277,28 +284,53 @@ import SwiftUI
                 
                 
                 // Update the translation component of the transform to move the entity
-                var endLocation = endPosition.getLocation3d()
-//                transform.translation = endLocation + self.aiTowerDropHeightDefault * self.adjScale
-//                print("entity drop location \(transform.translation)")
-//                // Define an animation using FromToByAnimation
-//                var animationDefinition = FromToByAnimation(to: transform, bindTarget: .transform)
-//                // Create an AnimationView using the defined animation with a delay
-//                var animationViewDefinition = AnimationView(source: animationDefinition, delay: 0, speed: 1)
-//                // Generate an AnimationResource from the AnimationViewDefinition
-//                var animationResource = try! AnimationResource.generate(with: animationViewDefinition)
+                
+                transform.translation += self.aiTowerDropHeightDefault * self.adjScale
+                print("entity drop location \(transform.translation)")
+                // Define an animation using FromToByAnimation
+                var animationDefinition = FromToByAnimation(to: transform, bindTarget: .transform)
+                // Create an AnimationView using the defined animation with a delay
+                var animationViewDefinition = AnimationView(source: animationDefinition, delay: 0, speed: 5)
+                // Generate an AnimationResource from the AnimationViewDefinition
+                var animationResource0 = try! AnimationResource.generate(with: animationViewDefinition)
 //                entity.playAnimation(animationResource)
+                
+                var endLocation = endPosition.getLocation3d()
+                transform.translation = endLocation + self.aiTowerDropHeightDefault * self.adjScale
+                print("entity drop location \(transform.translation)")
+                // Define an animation using FromToByAnimation
+                animationDefinition = FromToByAnimation(to: transform, bindTarget: .transform)
+                // Create an AnimationView using the defined animation with a delay
+                animationViewDefinition = AnimationView(source: animationDefinition, delay: 0, speed: 1)
+                // Generate an AnimationResource from the AnimationViewDefinition
+                var animationResource1 = try! AnimationResource.generate(with: animationViewDefinition)
+//                entity.playAnimation(animationResource)
+
                 
                 transform.translation = endLocation
                 print("entity drop location \(transform.translation)")
                 // Define an animation using FromToByAnimation
-                let animationDefinition = FromToByAnimation(to: transform, bindTarget: .transform)
+                animationDefinition = FromToByAnimation(to: transform, bindTarget: .transform)
                 // Create an AnimationView using the defined animation with a delay
-                let animationViewDefinition = AnimationView(source: animationDefinition, delay: 0, speed: 1)
+                animationViewDefinition = AnimationView(source: animationDefinition, delay: 0, speed: 10 )
                 // Generate an AnimationResource from the AnimationViewDefinition
-                let animationResource = try! AnimationResource.generate(with: animationViewDefinition)
+                var animationResource2 = try! AnimationResource.generate(with: animationViewDefinition)
+                
+                let animationResource = try! AnimationResource.sequence(with: [animationResource0, animationResource1, animationResource2])
+                
+                
+                var soundEffect: GameSound? = GameSound.pickupSounds.randomElement()
+                print("picked \(soundEffect)")
+                soundEffect?.play(on: entity)
+                
                 entity.playAnimation(animationResource)
                 
-                print("entity end position \(entity.components[TowerComponent.self]?.position)")
+                DispatchQueue.main.asyncAfter(deadline: .now() + self.aiMoveDuration, execute: {
+//                            self.playSound(fileName: choosedImageName, fileType: "mp3")
+                    soundEffect = GameSound.dropSounds.randomElement()
+                    print("picked \(soundEffect)")
+                    soundEffect?.play(on: entity)
+                })
                 
                 
                 towerComp = entity.components[TowerComponent.self]!

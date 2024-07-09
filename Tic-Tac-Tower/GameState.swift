@@ -255,7 +255,7 @@ struct AIOpponent {
     }
     
     
-    func getAIsNextMove(forAI: Bool = true) -> (TowerPosition, TowerSize) {
+    func getAIsNextMove(forAI: Bool = true, hard: Bool = false) -> (TowerPosition, TowerSize) {
         let forPlayer = forAI ? AIsPlayer : (AIsPlayer == .playerA ? .playerB : .playerA)
         let otherPlayer = forAI ? (AIsPlayer == .playerA ? .playerB : .playerA) : AIsPlayer
 
@@ -319,7 +319,9 @@ struct AIOpponent {
             return twoMoreToWin.randomElement()!
         }
         
-        if Int.random(in: 0..<5) != 3 { // 80% prob of running
+        var odds0 = 5
+        if hard { odds0 = 8 }
+        if Int.random(in: 0..<odds0) != 3 { // 80% prob of running
             var p5Plays: [(TowerPosition, TowerSize)] = []
             for size in TowerSize.allCases {
                 if forPlayableTiles[size]?[.p5] == true {
@@ -327,11 +329,16 @@ struct AIOpponent {
                 }
             }
             if !p5Plays.isEmpty {
+                if Int.random(in: 0..<10) != 4 { //90% of playing
+                    return p5Plays[0]
+                }
                 return p5Plays.randomElement()!
             }
         }
         
-        if Int.random(in: 0..<2) != 0 { // 50% prob of running
+        var odds1 = 2
+        if hard { odds1 = 1 }
+        if Int.random(in: 0..<odds1) != 0 { // 50% prob of playing corner
             let corners: [TowerPosition] = [.p1, .p3, .p7, .p9]
             var cornerPlays: [(TowerPosition, TowerSize)] = []
             for c in corners {

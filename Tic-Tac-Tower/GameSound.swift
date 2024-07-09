@@ -44,7 +44,7 @@ public enum GameSound: String, CaseIterable {
     public static let pickupSounds: [GameSound] = [.pickup_1, .pickup_2, .pickup_3]
     
     /// Plays a sound effect from an entity.
-    func play(on entity: Entity, offset: Duration? = nil) {
+    func play(on entity: Entity) {
         guard let effect = Self.soundForEffect[self] else {
             fatalError("No sound asset for sound: \(self)")
         }
