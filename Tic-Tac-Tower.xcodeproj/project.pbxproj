@@ -13,7 +13,6 @@
 		0C0402C92C3C678300B5E692 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402C12C3C678300B5E692 /* GameView.swift */; };
 		0C0402CA2C3C678300B5E692 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402C22C3C678300B5E692 /* ScoreView.swift */; };
 		0C0402CB2C3C678300B5E692 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402C32C3C678300B5E692 /* ControlsView.swift */; };
-		0C0402CC2C3C678300B5E692 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0402C42C3C678300B5E692 /* ContentView.swift */; };
 		0C0402D92C3C681D00B5E692 /* drop_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402CD2C3C681D00B5E692 /* drop_1.mp3 */; };
 		0C0402DA2C3C681D00B5E692 /* drop_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402CE2C3C681D00B5E692 /* drop_2.mp3 */; };
 		0C0402DB2C3C681D00B5E692 /* drop_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402CF2C3C681D00B5E692 /* drop_3.mp3 */; };
@@ -26,6 +25,7 @@
 		0C0402E22C3C681D00B5E692 /* pickup_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D62C3C681D00B5E692 /* pickup_3.mp3 */; };
 		0C0402E32C3C681D00B5E692 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C0402D72C3C681D00B5E692 /* win.mp3 */; };
 		0C3DF8B62C3C6F890081D323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3DF8B52C3C6F890081D323 /* Assets.xcassets */; };
+		0C3DF8B82C3C71A10081D323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3DF8B72C3C71A10081D323 /* ContentView.swift */; };
 		0CCF1D102C3C645500FA3EA6 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 0CCF1D0F2C3C645500FA3EA6 /* RealityKitContent */; };
 		0CCF1D122C3C645500FA3EA6 /* Tic_Tac_TowerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF1D112C3C645500FA3EA6 /* Tic_Tac_TowerApp.swift */; };
 		0CCF1D192C3C645600FA3EA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CCF1D182C3C645600FA3EA6 /* Preview Assets.xcassets */; };
@@ -49,7 +49,6 @@
 		0C0402C12C3C678300B5E692 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		0C0402C22C3C678300B5E692 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		0C0402C32C3C678300B5E692 /* ControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
-		0C0402C42C3C678300B5E692 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../Downloads/Tic-Tac-Tower-main/TicTacTowers2/ContentView.swift"; sourceTree = "<group>"; };
 		0C0402CD2C3C681D00B5E692 /* drop_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop_1.mp3; sourceTree = "<group>"; };
 		0C0402CE2C3C681D00B5E692 /* drop_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop_2.mp3; sourceTree = "<group>"; };
 		0C0402CF2C3C681D00B5E692 /* drop_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop_3.mp3; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		0C0402D62C3C681D00B5E692 /* pickup_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pickup_3.mp3; sourceTree = "<group>"; };
 		0C0402D72C3C681D00B5E692 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		0C3DF8B52C3C6F890081D323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C3DF8B72C3C71A10081D323 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0CCF1D0A2C3C645500FA3EA6 /* Tic-Tac-Tower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-Tac-Tower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CCF1D0E2C3C645500FA3EA6 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		0CCF1D112C3C645500FA3EA6 /* Tic_Tac_TowerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_TowerApp.swift; sourceTree = "<group>"; };
@@ -130,9 +130,9 @@
 		0CCF1D0C2C3C645500FA3EA6 /* Tic-Tac-Tower */ = {
 			isa = PBXGroup;
 			children = (
+				0C3DF8B72C3C71A10081D323 /* ContentView.swift */,
 				0C3DF8B52C3C6F890081D323 /* Assets.xcassets */,
 				0C0402D82C3C681D00B5E692 /* Asset */,
-				0C0402C42C3C678300B5E692 /* ContentView.swift */,
 				0C0402C32C3C678300B5E692 /* ControlsView.swift */,
 				0C0402BF2C3C678300B5E692 /* GameSound.swift */,
 				0C0402BE2C3C678300B5E692 /* GameState.swift */,
@@ -286,9 +286,9 @@
 			files = (
 				0C0402C82C3C678300B5E692 /* ViewModel.swift in Sources */,
 				0C0402C62C3C678300B5E692 /* GameState.swift in Sources */,
+				0C3DF8B82C3C71A10081D323 /* ContentView.swift in Sources */,
 				0C0402C72C3C678300B5E692 /* GameSound.swift in Sources */,
 				0C0402CB2C3C678300B5E692 /* ControlsView.swift in Sources */,
-				0C0402CC2C3C678300B5E692 /* ContentView.swift in Sources */,
 				0C0402CA2C3C678300B5E692 /* ScoreView.swift in Sources */,
 				0C0402C92C3C678300B5E692 /* GameView.swift in Sources */,
 				0CCF1D122C3C645500FA3EA6 /* Tic_Tac_TowerApp.swift in Sources */,
