@@ -1,0 +1,61 @@
+{
+  "advancedEditorSelectedIdentifier" : "ProjectBrowser",
+  "openSceneRelativePaths" : [
+    "forLogo.usda",
+    "tictactower_all_v2_unjoined.usda"
+  ],
+  "recentIdentifiers" : {
+
+  },
+  "sceneCameraHistory" : {
+    "006AB23A-5ED8-49B7-8C72-F0D6DDCA1AC3" : [
+      {
+        "date" : 742608766.621752,
+        "title" : "Untitled",
+        "transform" : [
+          1,
+          0,
+          -0,
+          0,
+          -0,
+          0.8734705,
+          -0.48687723,
+          0,
+          0,
+          0.48687723,
+          0.8734705,
+          0,
+          0,
+          0.51640046,
+          0.8796992,
+          1
+        ]
+      }
+    ],
+    "34930EA2-55FB-40A9-A7EF-E39D871C7EC3" : [
+      {
+        "date" : 742608729.675807,
+        "title" : "Untitled",
+        "transform" : [
+          0.99999994,
+          0,
+          -0,
+          0,
+          -0,
+          0.87019664,
+          -0.4927047,
+          0,
+          0,
+          0.4927047,
+          0.87019664,
+          0,
+          0,
+          0.5139907,
+          0.84702456,
+          1
+        ]
+      }
+    ]
+  },
+  "selectedSceneRelativePath" : "tictactower_all_v2_unjoined.usda"
+}

@@ -49,16 +49,15 @@ struct GameView: View {
                 }
                 model.setupGameState()
                 model.setupAudio()
-//                for effect in GameSound.allCases {
-//                    guard let resource = try? AudioFileResource.load(named: "/root/drop_1_mp3",
-//                                                                     from: "tictactower_all_v2_unjoined.usda",
-//                                                                     in: realityKitContentBundle
-//                                                                     ) else {
-//                        print("\(effect.rawValue)_mp3 not found")
-//                        return }
-//                    GameSound.soundForEffect[effect] = resource
-//                }
-//                print("here", GameSound.soundForEffect)
+
+                let es = content.subscribe(to: AnimationEvents.PlaybackCompleted.self,
+                                           on: model.rootEntity) { e in
+                                Task {
+                                    print(e.playbackController.isPlaying)               // false
+                                    print(e.playbackController.isComplete)              // true
+                                    print((e.playbackController.entity?.position.z)!)   // -7.0
+                                }
+                            }
                     
                 
             } update: { content in
@@ -240,14 +239,19 @@ struct GameView: View {
                             model.gameState.moveAndUpdateNextPlayer(towerComponent: towerComponent, endPosition: currentHighlightPosition)
                             
                             let currStatus: GameStatus = model.gameState.gameStatus
-                            if prevStatus == .blueTurn || prevStatus == .redTurn {
-                                if currStatus == .blueWin { model.scoreA += 1 }
-                                else if currStatus == .redWin { model.scoreB += 1 }
+                            if (prevStatus == .blueTurn || prevStatus == .redTurn) {
+                                if model.enforceRules {
+                                    if currStatus == .blueWin { model.scoreA += 1 }
+                                    else if currStatus == .redWin { model.scoreB += 1 }
+                                }
                                 if currStatus == .blueWin || currStatus == .redWin {
                                     model.gameState.saveWinningTowerComp()
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + model.aiMoveDuration, execute: {
+                                    var emitterDelay:Double = 0
+                                    if model.enforceRules { emitterDelay = model.aiMoveDuration}
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + emitterDelay, execute: {
                                         model.winningTowersFire(isEmitting: true)
                                     })
+                                    
                                     
                                 }
                             }

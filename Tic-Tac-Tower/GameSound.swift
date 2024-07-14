@@ -26,17 +26,17 @@ public enum GameSound: String, CaseIterable {
     
     var gain: Double {
         switch self {
-        case .pickup_1: return 0
-        case .pickup_2: return 0
-        case .pickup_3: return 0
-        case .drop_1: return -10
-        case .drop_2: return -10
-        case .drop_3: return -10
-        case .drop_4: return -10
-        case .drop_5: return -10
-        case .error_start_1: return -15
-        case .error_end_1: return -15
-        case .win: return -5
+        case .pickup_1: return 10
+        case .pickup_2: return 10
+        case .pickup_3: return 10
+        case .drop_1: return 0
+        case .drop_2: return 0
+        case .drop_3: return 0
+        case .drop_4: return 0
+        case .drop_5: return 0
+        case .error_start_1: return -5
+        case .error_end_1: return -5
+        case .win: return 5
         }
     }
     

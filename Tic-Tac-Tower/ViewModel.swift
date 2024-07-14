@@ -26,7 +26,7 @@ import SwiftUI
     var first_onEnd: Bool = true
     
     let volDefaultSize: Size3D = Size3D(width: 0.65, height: 0.22, depth: 0.47)
-    var aiTowerDropHeightDefault: SIMD3<Float> = [0, 0.2, 0]
+    var aiTowerDropHeightDefault: SIMD3<Float> = [0, 0.35, 0]
     
     var adjScale: Float = 1
     let compScale: Float = 0.17

@@ -64,7 +64,7 @@ struct ScoreView: View {
                     .disabled(model.scoreA == 0 && model.scoreB == 0)
                     
 
-                    Button("Restart Game") {
+                    Button(model.gameState.gameStatus == .redWin || model.gameState.gameStatus == .blueWin ? "Next Game" : "Restart Game") {
                         model.resetGame()
                     }
                     .background(

@@ -81,11 +81,11 @@ struct Tic_Tac_TowerApp: App {
         .windowResizability(.contentSize)
         .onChange(of: scenePhase) {
 //            print("scenePhase: \(scenePhase)")
-            if #unavailable(visionOS 2.0) {
+//            if #unavailable(visionOS 2.0) {
                 if scenePhase == .background {
                     dismissWindow(id: "ScoreView")
                 }
-            }
+//            }
         }
         
         WindowGroup(id: "ScoreView") {
